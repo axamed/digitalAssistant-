@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" role="img" aria-label="">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#232a3d"/>
+      <stop offset="52%" stop-color="#1a2030"/>
+      <stop offset="100%" stop-color="#121722"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="78%" cy="26%" r="62%">
+      <stop offset="0%" stop-color="#a97c2f" stop-opacity=".30"/>
+      <stop offset="60%" stop-color="#a97c2f" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#a97c2f" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowCool" cx="12%" cy="88%" r="55%">
+      <stop offset="0%" stop-color="#2f6f6a" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#2f6f6a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- One registry star, drawn once and repeated as a watermark. -->
+    <g id="star" fill="none" stroke="#d6ad5b" stroke-width="1.1">
+      <path d="M0,-26 L6,-8 L26,0 L6,8 L0,26 L-6,8 L-26,0 L-6,-8 Z"/>
+      <circle cx="0" cy="0" r="8" stroke-width=".9"/>
+    </g>
+
+    <pattern id="grid" width="88" height="88" patternUnits="userSpaceOnUse">
+      <path d="M88,0 H0 V88" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+      <use href="#star" x="44" y="44" stroke-opacity=".10" transform="translate(44 44) scale(.42) translate(-44 -44)"/>
+    </pattern>
+
+    <pattern id="arch" width="150" height="150" patternUnits="userSpaceOnUse">
+      <path d="M75,26 A49,49 0 0,1 124,75" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1.4"/>
+      <path d="M75,40 A35,35 0 0,1 110,75" fill="none" stroke="#d6ad5b" stroke-opacity=".08" stroke-width="1.2"/>
+    </pattern>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f131c" stop-opacity=".92"/>
+      <stop offset="55%" stop-color="#0f131c" stop-opacity=".66"/>
+      <stop offset="100%" stop-color="#0f131c" stop-opacity=".30"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="520" fill="url(#base)"/>
+  <rect width="1600" height="520" fill="url(#grid)"/>
+  <rect width="1600" height="520" fill="url(#arch)"/>
+  <rect width="1600" height="520" fill="url(#glow)"/>
+  <rect width="1600" height="520" fill="url(#glowCool)"/>
+
+  <!-- A larger registry seal, low contrast, anchored off the right edge. -->
+  <g transform="translate(1275 262)" opacity=".16" fill="none" stroke="#d6ad5b" stroke-width="2">
+    <circle r="176"/>
+    <circle r="166" stroke-width=".9"/>
+    <circle r="140" stroke-width="1.4"/>
+    <circle r="70" stroke-width="1.8"/>
+    <g stroke-width="1.2">
+      <path d="M0,-176 V-140 M0,140 V176 M-176,0 H-140 M140,0 H176"/>
+      <path d="M-124,-124 L-99,-99 M124,-124 L99,-99 M-124,124 L-99,99 M124,124 L99,99" stroke-width="1"/>
+    </g>
+    <use href="#star" transform="scale(2.5)"/>
+  </g>
+
+  <!-- Single accent rule along the foot of the band. -->
+  <rect x="0" y="516" width="1600" height="4" fill="#a97c2f" opacity=".55"/>
+
+  <rect width="1600" height="520" fill="url(#edge)"/>
+</svg>
